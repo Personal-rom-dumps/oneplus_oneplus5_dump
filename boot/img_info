@@ -1,0 +1,11 @@
+kernel=kernel
+ramdisk=ramdisk
+page_size=4096
+kernel_size=10471934
+ramdisk_size=360
+base_addr=0x00000000
+kernel_offset=0x00008000
+ramdisk_offset=0x02000000
+tags_offset=0x00000100
+cmd_line='console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 loop.max_part=7 usbcore.autosuspend=7 buildvariant=userdebug androidboot.selinux=permissive android.ver=11 miui=1 srgblock=0 cpuoc=0 agnisoundmod=1 wiredbtnaltmode=0 ledmode=0'
+board=""

@@ -1,0 +1,3 @@
+require version-baseband=3.1-00777-SDM660_GEN_PACK-1.381998.1.399979.1
+require version-trustzone=TZ.BF.4.0.7-324319
+require version-vendor=1605064928

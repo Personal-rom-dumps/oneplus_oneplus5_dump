@@ -1,0 +1,26 @@
+[+] Kernel successfully decompressed in-memory (the offsets that follow will be given relative to the decompressed binary)
+[+] Kernel successfully decompressed in-memory (the offsets that follow will be given relative to the decompressed binary)
+[+] Version string: Linux version 4.4.270-Predator-Stormbreaker-9.8-g4a05c96ac473 (sohamsen@circleci) (Android (7416131, based on r416183c) clang version 12.0.6 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)) #1 SMP PREEMPT Sun Jun 27 18:10:49 Asia 2021
+[+] Guessed architecture: aarch64 successfully in 4.71 seconds
+[+] Found relocations table at file offset 0x15f21d0 (count=94963)
+[+] Found kernel text candidate: 0xffffff8008132000
+WARNING! bad rela offset ffffff8008091c28
+Traceback (most recent call last):
+  File "/home/rasputinae267/dump/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 200, in __init__
+    self.find_kallsyms_names_uncompressed()
+  File "/home/rasputinae267/dump/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 567, in find_kallsyms_names_uncompressed
+    raise KallsymsNotFoundException('No embedded symbol table found in this kernel')
+__main__.KallsymsNotFoundException: No embedded symbol table found in this kernel
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rasputinae267/dump/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 1117, in <module>
+    kallsyms = KallsymsFinder(obtain_raw_kernel_from_file(kernel_bin.read()), args.bit_size)
+  File "/home/rasputinae267/dump/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 205, in __init__
+    raise first_error
+  File "/home/rasputinae267/dump/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 193, in __init__
+    self.find_kallsyms_token_table()
+  File "/home/rasputinae267/dump/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 421, in find_kallsyms_token_table
+    raise KallsymsNotFoundException('%d candidates for kallsyms_token_table in kernel image' % len(candidates_offsets))
+__main__.KallsymsNotFoundException: 0 candidates for kallsyms_token_table in kernel image
